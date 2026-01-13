@@ -1,0 +1,3731 @@
+{
+	"info": {
+		"_postman_id": "4fb6f60e-fa73-4fe9-8141-06e694265d7c",
+		"name": "Freifronzonz_ecom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38200587",
+		"_collection_link": "https://www.postman.com/cloudy-satellite-492822/workspace/darius/collection/38200587-4fb6f60e-fa73-4fe9-8141-06e694265d7c?action=share&source=collection_link&creator=38200587"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "signUp",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Arif Hossain\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"000000\",\r\n    \"role\": \"ADMIN\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/auth/register",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"devtowhid486@gmail.com\",\r\n    \"password\": \"000000\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/auth/login",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contactFormSubmit",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Rakib Ullah\",\r\n    \"email\": \"rakib420@gmail.com\",\r\n    \"phone\": \"01477852369\",\r\n    \"message\": \"Testing Message...\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/auth/contactFormSubmit",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"auth",
+												"contactFormSubmit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "verifyEmail",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"devtowhid486@gmail.com\"\r\n    // \"password\": \"123456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/auth/verifyEmail",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"auth",
+												"verifyEmail"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "verifyOTP",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"devtowhid486@gmail.com\",\r\n    \"otp\": \"987917\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/auth/verifyOTP",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"auth",
+												"verifyOTP"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "resetPass",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"devtowhid486@gmail.com\",\r\n    \"newPassword\": \"000000\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/auth/resetPass",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"auth",
+												"resetPass"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "user",
+							"item": [
+								{
+									"name": "getMe",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/user",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"user"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "userList",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/user/userList",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"user",
+												"userList"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateProfile",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{ \n \"name\": \"Md Towhid\",\n \"phone\": \"01829245088\",\n \"intro\": \"INtro 2\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "photo",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/user/updateProfile",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"user",
+												"updateProfile"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "changePassword",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"oldPassword\": \"000000\",\r\n    \"newPassword\": \"123456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/user/changePassword",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"user",
+												"changePassword"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "visitor",
+							"item": [
+								{
+									"name": "track",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"sessionId\": \"c76529f2-398f-4965-aa6d-341b02da08dc\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/visitor/track",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"visitor",
+												"track"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "total visitor",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/visitor/total?startDate=202434sdffad&endDate=2455645ewrf",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"visitor",
+												"total"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "202434sdffad"
+												},
+												{
+													"key": "endDate",
+													"value": "2455645ewrf"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "category",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Category 3\",\n \"des\": \"Description for category 3\"\n}",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "Bold Wines",
+													"type": "text"
+												},
+												{
+													"key": "des",
+													"value": "description of bold wines",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Rectangle 208 (2).webp"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/category/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"category",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/category",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-26 080854.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/category/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"category",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "69478a3e1818adc7ca37ce43"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Category 2\",\n \"des\": \"This description is for category 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-12 214759.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/category/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"category",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "69478a3e1818adc7ca37ce43"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\",\n \"des\": \"This description is for brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/category/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"category",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a222e6964741781aba52a"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "brand",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Test Brand\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Rectangle 208 (2).webp"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/brand/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"brand",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/brand/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"brand",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-26 080854.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/brand/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"brand",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "69477eff0c8ded986352b9d4"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\",\n \"des\": \"This description is for brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-12 214759.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/brand/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"brand",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "69477eff0c8ded986352b9d4"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\",\n \"des\": \"This description is for brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/brand/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"brand",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a28ae4563d23c3f47065b"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "size",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"75 ml\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/size/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/size/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-26 080854.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/size/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f6a9c0b32724d936aa18a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"140 ml\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/size/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f6a9c0b32724d936aa18a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\",\n \"des\": \"This description is for brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/size/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f6a9c0b32724d936aa18a"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "dashboard",
+							"item": [
+								{
+									"name": "stats",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/dashboard/stats",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"dashboard",
+												"stats"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "recentActivity",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/dashboard/recent",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"dashboard",
+												"recent"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "orders-chart",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/dashboard/orders-chart?types=monthly",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"dashboard",
+												"orders-chart"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "daily",
+													"disabled": true
+												},
+												{
+													"key": "types",
+													"value": "weekly",
+													"disabled": true
+												},
+												{
+													"key": "types",
+													"value": "monthly"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "recent-orders",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/dashboard/recent-orders",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"dashboard",
+												"recent-orders"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "daily",
+													"disabled": true
+												},
+												{
+													"key": "types",
+													"value": "weekly",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "review",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rating\": 5,\r\n    \"des\": \"Nice product\",\r\n    \"orderId\": \"69533e4e2544b8b120b868b9\",\r\n    \"productId\": \"694e0f483be44688d00bc841\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/review/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"review",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/review/:productId",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"review",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "694e0f563be44688d00bc842"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll admin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/review/getAll",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"review",
+												"getAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "isReviewed",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-26 080854.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/review/isReviewed/:productId",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"review",
+												"isReviewed",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "694e0f563be44688d00bc842"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-26 080854.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/size/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f6a9c0b32724d936aa18a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"140 ml\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/size/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f6a9c0b32724d936aa18a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "data",
+													"value": "{\n \"name\": \"Brand 3\",\n \"des\": \"This description is for brand 3\"\n}",
+													"type": "text"
+												},
+												{
+													"key": "img",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/size/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"size",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f6a9c0b32724d936aa18a"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "wishlist",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694e0f563be44688d00bc842\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/wishlist/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"wishlist",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694a2b344563d23c3f470664\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/wishlist/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"wishlist",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "3",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694a2b344563d23c3f470664\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/wishlist/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694b4382329094352d827b7f"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694a2b344563d23c3f470664\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/wishlist/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694b4382329094352d827b7f"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "cart",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694a2ace4563d23c3f470662\",\r\n    \"quantity\": \"2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/cart/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"cart",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAll",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "page",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/cart/?page&limit",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"cart",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": null
+												},
+												{
+													"key": "limit",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694a2b344563d23c3f470664\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/cart/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"cart",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694b62c79239fca3234227a2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694e0f483be44688d00bc841\",\r\n    \"quantity\": \"3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/cart/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"cart",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "69533f822544b8b120b868be"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\":\"694a2b344563d23c3f470664\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/cart/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"cart",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694b5c9945951e5dfb0d8b99"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "product",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/images.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/photo-1544776527-68e63addedf7.jpg"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Donec a Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"sizeId\": \"500ml\",\n    \"price\": \"200\",\n    \"discount\": true,\n    \"discountPercent\": \"10\",\n    \"stock\": true,\n    \"quantity\": \"25\",\n    \"categoryId\": \"694a22dc0166c07e027f0d3e\",\n    \"brandId\": \"694a29134563d23c3f47065f\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get All",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/pexels-photo-2912108.webp",
+														"/C:/Users/devel/Pictures/wine shop images/still-life-red-wine-bottle-glass-10764836.webp"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Keru 999\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"tag\": \"Hot\",\n    \"price\": \"150\",\n    \"discount\": true,\n    \"discountPercent\": \"15\",\n    \"stock\": true,\n    \"quantity\": \"20\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product"
+											],
+											"query": [
+												{
+													"key": "sortBy",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "categoryId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "brandId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "maxPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "inStock",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "hasDiscount",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAllByAdmin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/pexels-photo-2912108.webp",
+														"/C:/Users/devel/Pictures/wine shop images/still-life-red-wine-bottle-glass-10764836.webp"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Keru 999\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"tag\": \"Hot\",\n    \"price\": \"150\",\n    \"discount\": true,\n    \"discountPercent\": \"15\",\n    \"stock\": true,\n    \"quantity\": \"20\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/getAllByAdmin?minPrice=&maxPrice=",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												"getAllByAdmin"
+											],
+											"query": [
+												{
+													"key": "sortBy",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "categoryId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "brandId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": ""
+												},
+												{
+													"key": "maxPrice",
+													"value": ""
+												},
+												{
+													"key": "inStock",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "hasDiscount",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a2b004563d23c3f470663"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"sizeId\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a2b004563d23c3f470663"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a2b004563d23c3f470663"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Order",
+							"item": [
+								{
+									"name": "createOrder",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"shippingDetails\": {\r\n        \"name\": \"towhid\",\r\n        \"email\": \"devtowhid486@gmail.com\",\r\n        \"phone\": \"01720556088\",\r\n        \"address\": \"Banani Dhaka\"\r\n    },\r\n    \"paymentMethod\": \"CARD\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/order/createOrder",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"order",
+												"createOrder"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "allOrder",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "page",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "limit",
+													"value": "20",
+													"type": "text"
+												},
+												{
+													"key": "sortBy",
+													"value": "createdAt",
+													"type": "text"
+												},
+												{
+													"key": "sortOrder",
+													"value": "desc",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/order/allOrder",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"order",
+												"allOrder"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "allOrderAdmin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "page",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "limit",
+													"value": "20",
+													"type": "text"
+												},
+												{
+													"key": "sortBy",
+													"value": "createdAt",
+													"type": "text"
+												},
+												{
+													"key": "sortOrder",
+													"value": "desc",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/order/allOrderAdmin",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"order",
+												"allOrderAdmin"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id/details",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"shippingDetails\": {\r\n        \"name\": \"towhid\",\r\n        \"email\": \"devtowhid486@gmail.com\",\r\n        \"phone\": \"01720556088\",\r\n        \"address\": \"Banani Dhaka\"\r\n    },\r\n    \"paymentMethod\": \"CARD\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/order/:id/details",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"order",
+												":id",
+												"details"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694f5bf048ca15084557475b"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/:id/status",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"COMPLETED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/order//:id/status",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"order",
+												"",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "69533e4e2544b8b120b868b9"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "event",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/photo-1544776527-68e63addedf7.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/still-life-red-wine-bottle-glass-10764836.webp"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Winery Elegance\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"startDate\": \"2024-07-15T10:00:00Z\",\n    \"endDate\": \"2024-07-17T18:00:00Z\",\n    \"audienceSize\": \"51\",\n    \"price\": \"140\",\n    \"status\": \"UP_COMMING\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/event/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/images.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Elegance\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"startDate\": \"2024-07-15T10:00:00Z\",\n    \"endDate\": \"2024-07-17T18:00:00Z\",\n    \"audienceSize\": \"51\",\n    \"price\": \"140\",\n    \"status\": \"UP_COMMING\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/event/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "6950c4827fcd542c3d364f02"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get All",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/pexels-photo-2912108.webp",
+														"/C:/Users/devel/Pictures/wine shop images/still-life-red-wine-bottle-glass-10764836.webp"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Keru 999\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"tag\": \"Hot\",\n    \"price\": \"150\",\n    \"discount\": true,\n    \"discountPercent\": \"15\",\n    \"stock\": true,\n    \"quantity\": \"20\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/event/",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "3",
+													"disabled": true
+												},
+												{
+													"key": "sortBy",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "enim",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAllByAdmin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/pexels-photo-2912108.webp",
+														"/C:/Users/devel/Pictures/wine shop images/still-life-red-wine-bottle-glass-10764836.webp"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Keru 999\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"tag\": \"Hot\",\n    \"price\": \"150\",\n    \"discount\": true,\n    \"discountPercent\": \"15\",\n    \"stock\": true,\n    \"quantity\": \"20\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/getAllByAdmin",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												"getAllByAdmin"
+											],
+											"query": [
+												{
+													"key": "sortBy",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "categoryId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "brandId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "maxPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "inStock",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "hasDiscount",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a2b004563d23c3f470663"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/product/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "694a2b004563d23c3f470663"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "booking",
+							"item": [
+								{
+									"name": "create-booking",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"eventId\": \"6950c4827fcd542c3d364f02\",\r\n    \"paymentMethod\": \"CARD\",\r\n    \"person\": \"3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/event/booking/create-booking",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												"booking",
+												"create-booking"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":bookingId",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"eventId\": \"6950c4827fcd542c3d364f02\",\r\n    \"paymentMethod\": \"CARD\",\r\n    \"person\": \"3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/event/booking/:bookingId",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												"booking",
+												":bookingId"
+											],
+											"variable": [
+												{
+													"key": "bookingId",
+													"value": "6950e578d2696a4e56a919c5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "booking/allForAdmin",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/event/booking/allForAdmin",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												"booking",
+												"allForAdmin"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "booking/all",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"eventId\": \"6950c4827fcd542c3d364f02\",\r\n    \"paymentMethod\": \"CARD\",\r\n    \"person\": \"3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localURL}}/event/booking/all",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"event",
+												"booking",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "payment",
+							"item": [
+								{
+									"name": "history",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{userToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/payment/history",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"payment",
+												"history"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "adminHistory",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/payment/adminHistory",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"payment",
+												"adminHistory"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{localURL}}/payment/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"payment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "6950d91b5559aea31de466f3"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "blog",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/images.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/photo-1544776527-68e63addedf7.jpg"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n   \"title\": \"blog1 title\",\n   \"subTitle\": \"blog1 subtitle\",\n   \"des\": \"test des\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/blog",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n   \"title\": \"blog1 title\",\n   \"subTitle\": \"blog1 subtitle\",\n   \"des\": \"test des\",\n   \"active\": true\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/blog/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "695383cb41dd3e6c2f23acbf"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "viewCount",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/blog//viewCount/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog",
+												"",
+												"viewCount",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "6958ef10ecb795546ae76311"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get All",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localURL}}/blog",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog"
+											],
+											"query": [
+												{
+													"key": "sortBy",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "categoryId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "brandId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "maxPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "inStock",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "hasDiscount",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getAllByAdmin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": [
+														"/C:/Users/devel/Pictures/wine shop images/istockphoto-1432122645-612x612.jpg",
+														"/C:/Users/devel/Pictures/wine shop images/pexels-photo-2912108.webp",
+														"/C:/Users/devel/Pictures/wine shop images/still-life-red-wine-bottle-glass-10764836.webp"
+													]
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Keru 999\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"tag\": \"Hot\",\n    \"price\": \"150\",\n    \"discount\": true,\n    \"discountPercent\": \"15\",\n    \"stock\": true,\n    \"quantity\": \"20\"\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/blog/getAllByAdmin",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog",
+												"getAllByAdmin"
+											],
+											"query": [
+												{
+													"key": "sortBy",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "categoryId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "brandId",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "maxPrice",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "inStock",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "hasDiscount",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/blog/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "695383f841dd3e6c2f23acc0"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ":id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "/C:/Users/devel/Pictures/wine shop images/images.jpg"
+												},
+												{
+													"key": "data",
+													"value": "{\n    \"name\": \"Fortress Elegance\",\n    \"shortDes\": \"This short des of Fortress wine\",\n    \"des\": \"Alcohol is good for health. It give us strenght both mental and slightly physically\",\n    \"size\": \"500ml\",\n    \"price\": \"130\",\n    \"discount\": false,\n    \"discountPercent\": \"0\",\n    \"stock\": true,\n    \"quantity\": \"15\",\n    \"categoryId\": \"694a22ab0166c07e027f0d3c\",\n    \"brandId\": \"694a28c24563d23c3f47065c\",\n    \"removeImages\": [\"images-1766468352224-819988289.webp\"]\n}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localURL}}/blog/:id",
+											"host": [
+												"{{localURL}}"
+											],
+											"path": [
+												"blog",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "695383f841dd3e6c2f23acc0"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "cms",
+							"item": [
+								{
+									"name": "hero",
+									"item": [
+										{
+											"name": "update",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "token",
+														"value": "{{adminToken}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-12-30 094830.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n   \"title\": \"Hero 1 title generated\",\n   \"subTitle\": \"Hero 1 subtitle generated\"\n}",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/hero",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"hero"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-12-17 130616.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n        \"title\": \"Hero 1 title generated\",\n        \"subTitle\": \"Hero 1 subtitle generated\"\n    }",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/hero",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"hero"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "token",
+														"value": "{{adminToken}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-12-17 130616.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n        \"title\": \"Hero 1 title generated\",\n        \"subTitle\": \"Hero 1 subtitle generated\"\n    }",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/hero",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"hero"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "socials",
+									"item": [
+										{
+											"name": "update",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "token",
+														"value": "{{adminToken}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{localURL}}/social",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"social"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-12-17 130616.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n        \"title\": \"Hero 1 title generated\",\n        \"subTitle\": \"Hero 1 subtitle generated\"\n    }",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/social",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"social"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ourStory",
+									"item": [
+										{
+											"name": "update",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "token",
+														"value": "{{adminToken}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-11-26 080858.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n   \"title\": \"Our Story 1 title generated\",\n   \"subTitle\": \"Our Story 1 subtitle generated\"\n}",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/ourStory",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"ourStory"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "get",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-12-17 130616.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n        \"title\": \"Hero 1 title generated\",\n        \"subTitle\": \"Hero 1 subtitle generated\"\n    }",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/hero",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"hero"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "delete",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "token",
+														"value": "{{adminToken}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "image",
+															"type": "file",
+															"src": "/C:/Users/devel/Pictures/Screenshots/Screenshot 2025-12-17 130616.png"
+														},
+														{
+															"key": "data",
+															"value": "{\n        \"title\": \"Hero 1 title generated\",\n        \"subTitle\": \"Hero 1 subtitle generated\"\n    }",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{localURL}}/hero",
+													"host": [
+														"{{localURL}}"
+													],
+													"path": [
+														"hero"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localURL",
+			"value": ""
+		},
+		{
+			"key": "liveURL",
+			"value": ""
+		},
+		{
+			"key": "userToken",
+			"value": ""
+		},
+		{
+			"key": "adminToken",
+			"value": ""
+		}
+	]
+}

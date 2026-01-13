@@ -1,0 +1,232 @@
+/* app/globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #e5e5e5;
+  }
+}
+
+.admin-root {
+  background: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+.font-marcellus {
+  font-family: "Marcellus", serif;
+
+}
+ 
+
+/* ✅ CRITICAL: Set background image on html AND body */
+html,
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--foreground);
+  background-color: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/bg.png") center/cover no-repeat;
+  /* opacity: 0.8; 50% */
+  z-index: -1;
+}
+
+
+/* Override Ant Design defaults that add white backgrounds */
+.ant-layout,
+.ant-layout-content,
+.ant-card,
+.ant-modal-content,
+.ant-page-header {
+  background: transparent !important;
+}
+
+/* Font classes */
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-abhaya {
+  font-family: "Abhaya Libre", serif;
+}
+
+/* Remove number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Hide scrollbars */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Loader */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: linear-gradient(90deg, #000 50%, #0000 0) right/200% 100%;
+  animation: l21 2s infinite linear;
+}
+.loader::before {
+  content: "Loading...";
+  color: #0000;
+  padding: 0 5px;
+  background: inherit;
+  background-image: linear-gradient(90deg, #fff 50%, #000 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes l21 {
+  100% {
+    background-position: left;
+  }
+}
+
+/* Calendar styling */
+.custom-calendar {
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  border: none;
+  font-family: inherit;
+}
+.custom-calendar button {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+.custom-calendar button:hover {
+  background-color: #fef3c7;
+}
+.custom-calendar button.react-calendar__tile--active,
+.custom-calendar button.react-calendar__tile--now {
+  background-color: #b45309;
+  color: white;
+}
+
+
+
+
+
+/* custom code for the default color from the antd design */
+
+.ant-table,
+.ant-table-container,
+.ant-table-content,
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.ant-pagination,
+.ant-pagination-item,
+.ant-pagination-item-link {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.ant-pagination-item-active {
+  background-color: #e6f4ff !important;
+  border-color: #1677ff !important;
+}
+
+.ant-dropdown,
+.ant-dropdown-menu,
+.ant-select-dropdown {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.ant-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.ant-btn-primary {
+  background-color: #1677ff !important;
+  color: #ffffff !important;
+}
+
+/* Force light background on Select */
+.ant-select-selector {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: #e6f4ff !important;
+  color: #000000 !important;
+}
+
+.ant-select-item-option-active {
+  background-color: #f5f5f5 !important;
+}
+
+
+/* Force Modal background white */
+.ant-modal-content {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+
+/* Force AntD Input background to white */
+.ant-input,
+.ant-input-affix-wrapper {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #d9d9d9 !important;
+}
+
+
+
+.ant-layout-content {
+  background: #F4F7FD !important;
+}
+
+
+.custom-sidebar .ant-menu-item-selected {
+  background-color: #AF6900 !important;
+  color: #ffffff !important;
+}
+
+
+.ant-something{
+    background: transparent !important;
+}
+
+.custom-payment-modal .ant-modal-header {
+  background-color: white; /* Header background */
+  color: white;            /* Header text color */
+  border-bottom: none;     /* Optional: remove bottom border */
+}
