@@ -16,7 +16,7 @@ importers:
         version: 6.0.0
       body-parser:
         specifier: ^2.2.0
-        version: 2.2.0
+        version: 2.2.0(supports-color@5.5.0)
       cloudinary:
         specifier: ^2.8.0
         version: 2.8.0
@@ -40,16 +40,16 @@ importers:
         version: 0.1.6
       express:
         specifier: ^4.18.3
-        version: 4.21.2
+        version: 4.21.2(supports-color@5.5.0)
       express-rate-limit:
         specifier: ^8.0.1
-        version: 8.2.1(express@4.21.2)
+        version: 8.2.1(express@4.21.2(supports-color@5.5.0))
       firebase-admin:
         specifier: ^13.6.0
-        version: 13.6.0
+        version: 13.6.0(supports-color@5.5.0)
       google-auth-library:
         specifier: ^10.5.0
-        version: 10.5.0
+        version: 10.5.0(supports-color@5.5.0)
       helmet:
         specifier: ^8.1.0
         version: 8.1.0
@@ -66,8 +66,8 @@ importers:
         specifier: ^2.0.2
         version: 2.0.2
       nodemailer:
-        specifier: ^7.0.5
-        version: 7.0.10
+        specifier: ^10.1.4
+        version: 10.3.1
       passport:
         specifier: ^0.7.0
         version: 0.7.0
@@ -76,7 +76,7 @@ importers:
         version: 2.0.0
       socket.io:
         specifier: ^4.8.1
-        version: 4.8.1
+        version: 4.8.1(supports-color@5.5.0)
       stripe:
         specifier: ^19.1.0
         version: 19.2.0(@types/node@24.10.0)
@@ -87,8 +87,8 @@ importers:
         specifier: ^8.18.3
         version: 8.18.3
       zod:
-        specifier: ^4.1.12
-        version: 4.1.12
+        specifier: ^4.6.6
+        version: 4.6.6
     devDependencies:
       '@types/bcrypt':
         specifier: ^6.0.0
@@ -1582,9 +1582,9 @@ packages:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
 
-  nodemailer@7.0.10:
-    resolution: {integrity: sha512-Us/Se1WtT0ylXgNFfyFSx4LElllVLJXQjWi2Xz17xWw7amDKO2MLtFnVp1WACy7GkVGs+oBlRopVNUzlrGSw1w==}
-    engines: {node: '>=6.0.0'}
+  nodemailer@10.3.1:
+    resolution: {integrity: sha512-uF0AFsJC07Y1vdW7p580DKAnh7rAO+4UPSSB3mDCPNDufoiaOebV6JmrzpxB14OjEEEiBsNdYoM2Y+fN8M7BBA==}
+    engines: {node: '>=20.0.0'}
 
   nodemon@3.1.10:
     resolution: {integrity: sha512-WDjw3pJ0/0jMFmyNDp3gvY2YizjLmmOUQo6DEBY+JgdvW/yQ9mEeSw6H5ythl5Ny2ytb7f9C2nIbjSxMNzbJXw==}
@@ -1679,8 +1679,8 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  picomatch@2.3.1:
-    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
+  picomatch@2.3.2:
+    resolution: {integrity: sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA==}
     engines: {node: '>=8.6'}
 
   pkg-types@2.3.0:
@@ -2126,8 +2126,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@4.1.12:
-    resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
 
 snapshots:
 
@@ -2534,12 +2534,12 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@google-cloud/firestore@7.11.6':
+  '@google-cloud/firestore@7.11.6(supports-color@5.5.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       fast-deep-equal: 3.1.3
       functional-red-black-tree: 1.0.1
-      google-gax: 4.6.1
+      google-gax: 4.6.1(supports-color@5.5.0)
       protobufjs: 7.5.4
     transitivePeerDependencies:
       - encoding
@@ -2558,7 +2558,7 @@ snapshots:
   '@google-cloud/promisify@4.0.0':
     optional: true
 
-  '@google-cloud/storage@7.17.3':
+  '@google-cloud/storage@7.17.3(supports-color@5.5.0)':
     dependencies:
       '@google-cloud/paginator': 5.0.2
       '@google-cloud/projectify': 4.0.0
@@ -2567,13 +2567,13 @@ snapshots:
       async-retry: 1.3.3
       duplexify: 4.1.3
       fast-xml-parser: 4.5.3
-      gaxios: 6.7.1
-      google-auth-library: 9.15.1
+      gaxios: 6.7.1(supports-color@5.5.0)
+      google-auth-library: 9.15.1(supports-color@5.5.0)
       html-entities: 2.6.0
       mime: 3.0.0
       p-limit: 3.1.0
-      retry-request: 7.0.2
-      teeny-request: 9.0.0
+      retry-request: 7.0.2(supports-color@5.5.0)
+      teeny-request: 9.0.0(supports-color@5.5.0)
       uuid: 8.3.2
     transitivePeerDependencies:
       - encoding
@@ -3168,7 +3168,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  agent-base@6.0.2:
+  agent-base@6.0.2(supports-color@5.5.0):
     dependencies:
       debug: 4.4.3(supports-color@5.5.0)
     transitivePeerDependencies:
@@ -3190,7 +3190,7 @@ snapshots:
   anymatch@3.1.3:
     dependencies:
       normalize-path: 3.0.0
-      picomatch: 2.3.1
+      picomatch: 2.3.2
 
   append-field@1.0.0: {}
 
@@ -3230,11 +3230,11 @@ snapshots:
 
   binary-extensions@2.3.0: {}
 
-  body-parser@1.20.3:
+  body-parser@1.20.3(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.0
@@ -3247,7 +3247,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  body-parser@2.2.0:
+  body-parser@2.2.0(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
@@ -3403,13 +3403,17 @@ snapshots:
 
   dayjs@1.11.19: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@5.5.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
 
-  debug@4.3.7:
+  debug@4.3.7(supports-color@5.5.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.4.3(supports-color@5.5.0):
     dependencies:
@@ -3488,7 +3492,7 @@ snapshots:
 
   engine.io-parser@5.2.3: {}
 
-  engine.io@6.6.4:
+  engine.io@6.6.4(supports-color@5.5.0):
     dependencies:
       '@types/cors': 2.8.19
       '@types/node': 24.10.0
@@ -3496,7 +3500,7 @@ snapshots:
       base64id: 2.0.0
       cookie: 0.7.2
       cors: 2.8.5
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@5.5.0)
       engine.io-parser: 5.2.3
       ws: 8.17.1
     transitivePeerDependencies:
@@ -3530,26 +3534,26 @@ snapshots:
   event-target-shim@5.0.1:
     optional: true
 
-  express-rate-limit@8.2.1(express@4.21.2):
+  express-rate-limit@8.2.1(express@4.21.2(supports-color@5.5.0)):
     dependencies:
-      express: 4.21.2
+      express: 4.21.2(supports-color@5.5.0)
       ip-address: 10.0.1
 
-  express@4.21.2:
+  express@4.21.2(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.3
+      body-parser: 1.20.3(supports-color@5.5.0)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.1
       cookie-signature: 1.0.6
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.3.1
+      finalhandler: 1.3.1(supports-color@5.5.0)
       fresh: 0.5.2
       http-errors: 2.0.0
       merge-descriptors: 1.0.3
@@ -3561,8 +3565,8 @@ snapshots:
       qs: 6.13.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.19.0
-      serve-static: 1.16.2
+      send: 0.19.0(supports-color@5.5.0)
+      serve-static: 1.16.2(supports-color@5.5.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 1.6.18
@@ -3605,9 +3609,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.3.1:
+  finalhandler@1.3.1(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -3617,7 +3621,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  firebase-admin@13.6.0:
+  firebase-admin@13.6.0(supports-color@5.5.0):
     dependencies:
       '@fastify/busboy': 3.2.0
       '@firebase/database-compat': 2.1.0
@@ -3625,14 +3629,14 @@ snapshots:
       '@types/node': 22.19.1
       farmhash-modern: 1.1.0
       fast-deep-equal: 3.1.3
-      google-auth-library: 9.15.1
+      google-auth-library: 9.15.1(supports-color@5.5.0)
       jsonwebtoken: 9.0.2
-      jwks-rsa: 3.2.0
+      jwks-rsa: 3.2.0(supports-color@5.5.0)
       node-forge: 1.3.1
       uuid: 11.1.0
     optionalDependencies:
-      '@google-cloud/firestore': 7.11.6
-      '@google-cloud/storage': 7.17.3
+      '@google-cloud/firestore': 7.11.6(supports-color@5.5.0)
+      '@google-cloud/storage': 7.17.3(supports-color@5.5.0)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -3670,10 +3674,10 @@ snapshots:
   functional-red-black-tree@1.0.1:
     optional: true
 
-  gaxios@6.7.1:
+  gaxios@6.7.1(supports-color@5.5.0):
     dependencies:
       extend: 3.0.2
-      https-proxy-agent: 7.0.6
+      https-proxy-agent: 7.0.6(supports-color@5.5.0)
       is-stream: 2.0.1
       node-fetch: 2.7.0
       uuid: 9.0.1
@@ -3681,27 +3685,27 @@ snapshots:
       - encoding
       - supports-color
 
-  gaxios@7.1.3:
+  gaxios@7.1.3(supports-color@5.5.0):
     dependencies:
       extend: 3.0.2
-      https-proxy-agent: 7.0.6
+      https-proxy-agent: 7.0.6(supports-color@5.5.0)
       node-fetch: 3.3.2
       rimraf: 5.0.10
     transitivePeerDependencies:
       - supports-color
 
-  gcp-metadata@6.1.1:
+  gcp-metadata@6.1.1(supports-color@5.5.0):
     dependencies:
-      gaxios: 6.7.1
+      gaxios: 6.7.1(supports-color@5.5.0)
       google-logging-utils: 0.0.2
       json-bigint: 1.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  gcp-metadata@8.1.2:
+  gcp-metadata@8.1.2(supports-color@5.5.0):
     dependencies:
-      gaxios: 7.1.3
+      gaxios: 7.1.3(supports-color@5.5.0)
       google-logging-utils: 1.1.3
       json-bigint: 1.0.0
     transitivePeerDependencies:
@@ -3759,43 +3763,43 @@ snapshots:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
-  google-auth-library@10.5.0:
+  google-auth-library@10.5.0(supports-color@5.5.0):
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      gaxios: 7.1.3
-      gcp-metadata: 8.1.2
+      gaxios: 7.1.3(supports-color@5.5.0)
+      gcp-metadata: 8.1.2(supports-color@5.5.0)
       google-logging-utils: 1.1.3
-      gtoken: 8.0.0
+      gtoken: 8.0.0(supports-color@5.5.0)
       jws: 4.0.0
     transitivePeerDependencies:
       - supports-color
 
-  google-auth-library@9.15.1:
+  google-auth-library@9.15.1(supports-color@5.5.0):
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      gaxios: 6.7.1
-      gcp-metadata: 6.1.1
-      gtoken: 7.1.0
+      gaxios: 6.7.1(supports-color@5.5.0)
+      gcp-metadata: 6.1.1(supports-color@5.5.0)
+      gtoken: 7.1.0(supports-color@5.5.0)
       jws: 4.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  google-gax@4.6.1:
+  google-gax@4.6.1(supports-color@5.5.0):
     dependencies:
       '@grpc/grpc-js': 1.14.1
       '@grpc/proto-loader': 0.7.15
       '@types/long': 4.0.2
       abort-controller: 3.0.0
       duplexify: 4.1.3
-      google-auth-library: 9.15.1
+      google-auth-library: 9.15.1(supports-color@5.5.0)
       node-fetch: 2.7.0
       object-hash: 3.0.0
       proto3-json-serializer: 2.0.2
       protobufjs: 7.5.4
-      retry-request: 7.0.2
+      retry-request: 7.0.2(supports-color@5.5.0)
       uuid: 9.0.1
     transitivePeerDependencies:
       - encoding
@@ -3808,17 +3812,17 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  gtoken@7.1.0:
+  gtoken@7.1.0(supports-color@5.5.0):
     dependencies:
-      gaxios: 6.7.1
+      gaxios: 6.7.1(supports-color@5.5.0)
       jws: 4.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  gtoken@8.0.0:
+  gtoken@8.0.0(supports-color@5.5.0):
     dependencies:
-      gaxios: 7.1.3
+      gaxios: 7.1.3(supports-color@5.5.0)
       jws: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -3856,10 +3860,10 @@ snapshots:
 
   http-parser-js@0.5.10: {}
 
-  http-proxy-agent@5.0.0:
+  http-proxy-agent@5.0.0(supports-color@5.5.0):
     dependencies:
       '@tootallnate/once': 2.0.0
-      agent-base: 6.0.2
+      agent-base: 6.0.2(supports-color@5.5.0)
       debug: 4.4.3(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
@@ -3867,15 +3871,15 @@ snapshots:
 
   http-status@2.1.0: {}
 
-  https-proxy-agent@5.0.1:
+  https-proxy-agent@5.0.1(supports-color@5.5.0):
     dependencies:
-      agent-base: 6.0.2
+      agent-base: 6.0.2(supports-color@5.5.0)
       debug: 4.4.3(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
     optional: true
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@5.5.0):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@5.5.0)
@@ -3968,7 +3972,7 @@ snapshots:
       ecdsa-sig-formatter: 1.0.11
       safe-buffer: 5.2.1
 
-  jwks-rsa@3.2.0:
+  jwks-rsa@3.2.0(supports-color@5.5.0):
     dependencies:
       '@types/express': 4.17.25
       '@types/jsonwebtoken': 9.0.10
@@ -4109,7 +4113,7 @@ snapshots:
 
   node-gyp-build@4.8.4: {}
 
-  nodemailer@7.0.10: {}
+  nodemailer@10.3.1: {}
 
   nodemon@3.1.10:
     dependencies:
@@ -4201,7 +4205,7 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  picomatch@2.3.1: {}
+  picomatch@2.3.2: {}
 
   pkg-types@2.3.0:
     dependencies:
@@ -4287,7 +4291,7 @@ snapshots:
 
   readdirp@3.6.0:
     dependencies:
-      picomatch: 2.3.1
+      picomatch: 2.3.2
 
   readdirp@4.1.2: {}
 
@@ -4300,11 +4304,11 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  retry-request@7.0.2:
+  retry-request@7.0.2(supports-color@5.5.0):
     dependencies:
       '@types/request': 2.48.13
       extend: 3.0.2
-      teeny-request: 9.0.0
+      teeny-request: 9.0.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -4327,9 +4331,9 @@ snapshots:
 
   semver@7.7.3: {}
 
-  send@0.19.0:
+  send@0.19.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -4345,12 +4349,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.16.2:
+  serve-static@1.16.2(supports-color@5.5.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.0
+      send: 0.19.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4396,31 +4400,31 @@ snapshots:
     dependencies:
       semver: 7.7.3
 
-  socket.io-adapter@2.5.5:
+  socket.io-adapter@2.5.5(supports-color@5.5.0):
     dependencies:
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@5.5.0)
       ws: 8.17.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  socket.io-parser@4.2.4:
+  socket.io-parser@4.2.4(supports-color@5.5.0):
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
-  socket.io@4.8.1:
+  socket.io@4.8.1(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       base64id: 2.0.0
       cors: 2.8.5
-      debug: 4.3.7
-      engine.io: 6.6.4
-      socket.io-adapter: 2.5.5
-      socket.io-parser: 4.2.4
+      debug: 4.3.7(supports-color@5.5.0)
+      engine.io: 6.6.4(supports-color@5.5.0)
+      socket.io-adapter: 2.5.5(supports-color@5.5.0)
+      socket.io-parser: 4.2.4(supports-color@5.5.0)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4493,10 +4497,10 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  teeny-request@9.0.0:
+  teeny-request@9.0.0(supports-color@5.5.0):
     dependencies:
-      http-proxy-agent: 5.0.0
-      https-proxy-agent: 5.0.1
+      http-proxy-agent: 5.0.0(supports-color@5.5.0)
+      https-proxy-agent: 5.0.1(supports-color@5.5.0)
       node-fetch: 2.7.0
       stream-events: 1.0.5
       uuid: 9.0.1
@@ -4671,4 +4675,4 @@ snapshots:
   yocto-queue@0.1.0:
     optional: true
 
-  zod@4.1.12: {}
+  zod@4.6.6: {}
